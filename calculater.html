@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/segment7" type="text/css"/>
+     <script>
+        var a=0,b=0, s=""; 
+        function abc(c)
+        {
+            if(c=='1')
+            {
+                a=a*10+1;
+                document.getElementById("num1").value=a;
+
+            }
+
+           else if(c=='2')
+           {
+            a=a*10+2;
+                document.getElementById("num1").value=a;
+             }
+
+             else if(c=='3')
+           {
+            a=a*10+3;
+                document.getElementById("num1").value=a;
+             }
+
+             else if(c=='4')
+           {
+            a=a*10+4;
+                document.getElementById("num1").value=a;
+             }
+             else if(c=='5')
+           {
+            a=a*10+5;
+                document.getElementById("num1").value=a;
+             }
+             else if(c=='6')
+           {
+            a=a*10+6;
+                document.getElementById("num1").value=a;
+             }
+             else if(c=='7')
+           {
+            a=a*10+7;
+                document.getElementById("num1").value=a;
+             }
+             else if(c=='2')
+           {
+            a=a*10+2;
+                document.getElementById("num1").value=a;
+             }
+             else if(c=='8')
+           {
+            a=a*10+8;
+                document.getElementById("num1").value=a;
+             }
+             else if(c=='9')
+           {
+            a=a*10+9;
+                document.getElementById("num1").value=a;
+             }
+             else if(c=='0')
+           {
+            a=a*10+0;
+                document.getElementById("num1").value=a;
+             }
+             else if(c=='00')
+           {
+            a=a*100+0;
+                document.getElementById("num1").value=a;
+             }
+
+
+             else if (c=='+')
+             {
+              b=a;
+              a=0;
+              s="+";
+             }
+             else if (c=='-')
+             {
+              b=a;
+              a=0;
+              s="-";
+             }
+             else if (c=='X')
+             {
+              b=a;
+              a=0;
+              s="X";
+             }
+             else if (c=='/')
+             {
+              b=a;
+              a=0;
+              s="/";
+             }
+             else if(c=="=")
+             {
+              if(s=="+")
+              {
+                a=a+b;
+              }
+              else if (s=="-")
+              {
+                a=b-a;
+              }
+              else if (s=="X")
+              {
+                a=a*b;
+              }
+              else if (s=="/")
+              {
+              a=b/a;
+
+              }
+              else if (s=="%")
+              {
+                a=b*(a/100);
+              }
+              document.getElementById("num1").value=a;
+
+             }
+
+            else if (c=='C')
+            {
+              a=0;
+              b=0;
+              s="";
+              document.getElementById("num1").value=a;
+
+            }
+            else if (c=="<<")
+            {
+              a=a/10
+              a=parseInt(a);
+              document.getElementById("num1").value=a;
+
+
+            }
+
+            else if (c=="%")
+            {
+              b=a;
+              a=0;
+              s="%"
+
+            }
+
+            else if (c=='x221A')
+            {
+              a=Math.sqrt(a);
+              document.getElementById("num1").value=a;
+            }
+             
+        }
+
+        
+
+     </script>
+       
+     <style>
+ .abc
+        {
+           width:50px;
+           padding:10px;
+           background-color:rgb(0, 0, 0);
+           color:white;
+           margin-left:30px;
+           font-size:17px;
+           
+
+
+        }
+     </style>
+</head>
+
+<body>
+    <br><br>
+    <div style="width: 310px; margin:auto; padding:40px;
+    border-radius: 20px;
+    background-color:rgb(54, 56, 65);" >
+
+    <input id="num1" readonly="" value="0" type="text"
+    style="width: 90%; padding: 6px;
+    font-size: 24px;
+    background-color:aqua;
+    text-align: right;
+    font-weight: bolder;
+    font-family: segment7Standard;
+    font-weight:normal;
+    font-style: italic;" />
+
+    <br><br>
+    <input onclick="abc('C')" style="margin-left: 0px;" class="abc" type="submit" value="C" />
+    <input onclick="abc('<')" class="abc" type="submit" value="<" />
+    <input onclick="abc('%')" class="abc" type="submit" value="%" />
+    <input onclick="abc('&#x221A')" class="abc" type="submit" value="&#x221A" />
+    <br><br><br>
+    <input onclick="abc('1')" style="margin-left: 0px;" class="abc" type="submit" value="1" />
+    <input onclick="abc('2')" class="abc" type="submit" value="2" />
+    <input onclick="abc('3')" class="abc" type="submit" value="3" />
+    <input onclick="abc('/')" class="abc" type="submit" value="/" />
+
+    <br><br><br>
+    <input onclick="abc('4')" style="margin-left: 0px;"  class="abc" type="submit" value="4" />
+    <input onclick="abc('5')" class="abc" type="submit" value="5" />
+    <input onclick="abc('6')" class="abc" type="submit" value="6" />
+    <input onclick="abc('-')" class="abc" type="submit" value="-" />
+
+    <br><br><br>
+    <input onclick="abc('7')" style="margin-left: 0px;"  class="abc" type="submit" value="7" />
+    <input onclick="abc('8')" class="abc" type="submit" value="8" />
+    <input onclick="abc('9')" class="abc" type="submit" value="9" />
+    <input onclick="abc('X')" class="abc" type="submit" value="X" />
+    <br><br><br>
+    <input onclick="abc('00')"style="margin-left: 0px;" class="abc" type="submit" value="00" />
+    <input onclick="abc('0')" class="abc" type="submit" value="0" />
+    <input onclick="abc('=')" class="abc" type="submit" value="=" />
+    <input onclick="abc('+')" class="abc" type="submit" value="+" />
+
+
+
+
+
+
+
+ 
+    
+</div>
+    
+</body>
+</html>
